@@ -1,0 +1,4 @@
+1. six level h1-h6 and then color, font size, font family(internal css), head title,img.
+2. by using(external css) six level h1-h6 and then color,font-size,font-family.
+3. by using internal JS add 5 numbers, sub with 40, multiply with 30 show in console.
+4. by external JS add 5 numbers, sub with 40, multiply with 30.

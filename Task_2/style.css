@@ -1,0 +1,31 @@
+/* External CSS */
+p{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+}
+body{
+    background-image: url('images/night.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+}
+content{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5%;
+}
+h2{
+    font-size: 60px;
+}
+counter{
+    font-size: 50px;
+    word-spacing: 100px;
+}
+span{
+    word-spacing: 140px;
+}

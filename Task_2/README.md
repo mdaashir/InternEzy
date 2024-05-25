@@ -1,4 +1,4 @@
-# 🌟 Task 1: HTML, CSS, and JavaScript Exercises
+# 🌟 Task 2: HTML, CSS, and JavaScript Exercises
 
 <p align="center">
   <img src="assignment.jpg" alt="Task 2 Banner" width="800">

@@ -38,34 +38,41 @@ h2 {
 }
 
 .countdown {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.countdown div {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    width: 130px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.countdown h1 {
     font-size: 50px;
-    font-weight: bold;
-    word-spacing: 80px;
-    margin: 10px 0;
+    margin: 0;
     color: #00ffcc;
 }
 
-span {
+.countdown span {
     font-size: 18px;
-    display: block;
-    margin-top: -10px;
-    word-spacing: 100px;
     color: #ffcc00;
 }
 
 .clock {
     display: flex;
     justify-content: space-around;
-    font-size: 20px;
     margin-top: 20px;
 }
 
 .clock h3 {
     margin: 5px 0;
-}
-
-.time, .date {
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }

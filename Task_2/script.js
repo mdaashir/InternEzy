@@ -11,8 +11,10 @@ function updateCountdown() {
     let remMin = parseInt((rem % (1000 * 60 * 60)) / (1000 * 60));
     let remSec = parseInt((rem % (1000 * 60)) / 1000);
 
-    let remTime = `${remDay < 10 ? '0' + remDay : remDay} ${remHr < 10 ? '0' + remHr : remHr} ${remMin < 10 ? '0' + remMin : remMin} ${remSec < 10 ? '0' + remSec : remSec}`;
-    document.getElementsByClassName('countdown')[0].innerHTML = remTime;
+    document.getElementsByClassName('day')[0].innerHTML = remDay < 10 ? '0' + remDay : remDay;
+    document.getElementsByClassName('hr')[0].innerHTML = remHr < 10 ? '0' + remHr : remHr;
+    document.getElementsByClassName('min')[0].innerHTML = remMin < 10 ? '0' + remMin : remMin;
+    document.getElementsByClassName('sec')[0].innerHTML = remSec < 10 ? '0' + remSec : remSec;
 
     const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];

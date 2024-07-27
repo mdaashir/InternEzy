@@ -210,7 +210,7 @@ input:checked + .slider {
 	background-color: #2196f3;
 }
 
-input:checked + .slider {
+input:checked + .slider:before {
 	-webkit-transform: translateX(26px);
 	-ms-transform: translateX(26px);
 	transform: translateX(26px);
@@ -223,6 +223,7 @@ input:checked + .slider {
 .slider.round:before {
 	border-radius: 50%;
 }
+
 @media only screen and (max-width: 942px) {
 	.last-menu-1 {
 		margin-left: 0;

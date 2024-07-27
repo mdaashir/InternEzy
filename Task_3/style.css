@@ -135,9 +135,9 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: rgb(102, 100, 100);
+	background-color: rgb(238, 238, 238);
 	font-size: 15px;
-	color: rgb(182, 100, 100);
+	color: rgb(102, 100, 100);
 }
 
 .ind {
@@ -171,9 +171,39 @@ last-menu-1 {
 	margin-right: 90px;
 }
 
-break{
-	border: 1px solid rgb(223,223,223);
-
+.break {
+	border: 1px solid rgb(223, 223, 223);
 }
 
+@media only screen and (max-width: 942px) {
+	.last-menu-1 {
+		margin-left: 0;
+	}
 
+	.last-menu-1,
+	.last-menu-2,
+	.ind {
+		font-size: 13px;
+		clear: both;
+		white-space: nowrap;
+	}
+	.footer-menu {
+		gap: 0;
+	}
+	.google-heading {
+		white-space: nowrap;
+	}
+	.search-field {
+		width: 400px;
+	}
+	.fa-microphone {
+		margin: 0;
+		margin-top: 40px;
+		margin-left: 430px;
+	}
+	.footer-menu {
+		height: 60px;
+		display: inline-block;
+		margin-left: 60px;
+	}
+}

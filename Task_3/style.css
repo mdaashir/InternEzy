@@ -3,6 +3,11 @@
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+.banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .banner {
 	text-align: center;
 	font-size: 20px;

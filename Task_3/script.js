@@ -71,7 +71,5 @@ googleSearch.addEventListener('click', function () {
 });
 
 searchField.addEventListener('keydown', function (event) {
-    if (event.key === 'Enter' && searchField.value !== '') {
-        search();
-    }
+	if (event.key === 'Enter' && searchField.value !== '') search();
 });

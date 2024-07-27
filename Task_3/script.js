@@ -2,13 +2,14 @@ let toogle = document.getElementById('toogle');
 let dark = document.querySelector('.dark');
 let footer = document.querySelector('.footer');
 let searchField = document.querySelector('.search-field');
+let googleSearch = document.querySelector('#search');
 let btn = document.querySelector('.btn');
 let btn1 = document.querySelector('.btn1');
 let menu = document.querySelector('.menu');
 let user = document.querySelector('.user');
 let findOut = document.querySelector('.find-out');
 let languages = document.querySelector('.languages');
-let hrbreak = document.querySelector( '.break' );
+let hrbreak = document.querySelector('.break');
 let saveDarkMode = localStorage.getItem('darkMode');
 
 function darkModeOn() {
@@ -47,7 +48,7 @@ function darkModeOff() {
 	findOut.style.color = 'blue';
 	languages.style.color = 'blue';
 	hrbreak.style.border = '1px solid rgb(223,223,223)';
-	localStorage.setItem('darkMode',  null);
+	localStorage.setItem('darkMode', 'disabled');
 }
 
 toogle.addEventListener('click', function () {
@@ -59,3 +60,12 @@ if (saveDarkMode === 'enabled') {
 	toogle.checked = true;
 	darkModeOn();
 }
+
+function search() {
+	let input = searchField.value;
+	window.location.href = `https://www.google.com/search?q=${input}`;
+}
+
+googleSearch.addEventListener('click', function () {
+	if (searchField.value !== '') search();
+});

@@ -69,3 +69,9 @@ function search() {
 googleSearch.addEventListener('click', function () {
 	if (searchField.value !== '') search();
 });
+
+searchField.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter' && searchField.value !== '') {
+        search();
+    }
+});

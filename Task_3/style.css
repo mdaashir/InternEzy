@@ -175,6 +175,54 @@ last-menu-1 {
 	border: 1px solid rgb(223, 223, 223);
 }
 
+.switch {
+	position: relative;
+	margin-top: 8px;
+	width: 60px;
+	height: 25px;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 20px;
+	width: 20px;
+	left: 4px;
+	bottom: 3px;
+	background-color: white;
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:checked + .slider {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
 @media only screen and (max-width: 942px) {
 	.last-menu-1 {
 		margin-left: 0;

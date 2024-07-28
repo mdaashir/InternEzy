@@ -1,55 +1,55 @@
 /* External CSS */
 .content {
-    background-color: #ffb8b8;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 20px; 
-    padding: 20px;
+	background-color: #ffb8b8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding: 20px;
 }
-p{
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Times New Roman';
+p {
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Times New Roman';
 }
 header {
-    background-color: lightblue;
-    padding: 2px;
-    text-align: center;
-    flex: 1;
+	background-color: lightblue;
+	padding: 2px;
+	text-align: center;
+	flex: 1;
 }
 h1 {
-    color: #ff0000; /* Red */
-    font-size: 36px;
-    font-family: Arial;
+	color: #ff0000; /* Red */
+	font-size: 36px;
+	font-family: Arial;
 }
 h2 {
-    color: #00ff00; /* Green */
-    font-size: 30px;
-    font-family: 'Courier New';
+	color: #00ff00; /* Green */
+	font-size: 30px;
+	font-family: 'Courier New';
 }
 h3 {
-    color: #0000ff; /* Blue */
-    font-size: 24px;
-    font-family: 'Gill Sans';
+	color: #0000ff; /* Blue */
+	font-size: 24px;
+	font-family: 'Gill Sans';
 }
 h4 {
-    color: #ff00ff; /* Purple */
-    font-size: 20px;
-    font-family:'Segoe UI';
+	color: #ff00ff; /* Purple */
+	font-size: 20px;
+	font-family: 'Segoe UI';
 }
 h5 {
-    color: #ffa500; /* Orange */
-    font-size: 16px;
-    font-family:Impact;
+	color: #ffa500; /* Orange */
+	font-size: 16px;
+	font-family: Impact;
 }
 h6 {
-    color: #008080; /* Teal */
-    font-size: 14px;
-    font-family:Verdana;
+	color: #008080; /* Teal */
+	font-size: 14px;
+	font-family: Verdana;
 }
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }

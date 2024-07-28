@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- <link href="style.css" rel="stylesheet" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <link href="style.css" rel="stylesheet" />
         <script src="script.js"></script> -->
-        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-        <title>InternEzy - Calculations scripts (Internal)</title>
-        <style>
-        /* Internal CSS for button */
-        button {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 10px;
-        }
-        body {
-            text-align: center;
-        }
-    </style>
-    </head>
-    <body>
-        <p><mark>InternEzy - Calculations scripts (Internal)</mark></p>
-        <button onclick="showPopup()">Calculate</button>
-        <script>
-            function showPopup() {
-                alert("To view the result, please open the browser console window.");
-            }
-            var num1 = 10;
-            var num2 = 20;
-            var num3 = 30;
-            var num4 = 40;
-            var num5 = 50;
+		<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+		<title>InternEzy - Calculations scripts (Internal)</title>
+		<style>
+			/* Internal CSS for button */
+			button {
+				background-color: #4caf50; /* Green */
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				border-radius: 10px;
+			}
+			body {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<p><mark>InternEzy - Calculations scripts (Internal)</mark></p>
+		<button onclick="showPopup()">Calculate</button>
+		<script>
+			function showPopup() {
+				alert('To view the result, please open the browser console window.');
+			}
+			var num1 = 10;
+			var num2 = 20;
+			var num3 = 30;
+			var num4 = 40;
+			var num5 = 50;
 
-            // Array to hold the numbers
-            var numbers = [num1, num2, num3, num4, num5];
-        
-            for (var i = 0; i < numbers.length; i++) {
-                console.log("Value of num" + (i + 1) + ":", numbers[i]);
-            }
-            
-            // Add the numbers
-            var sum = num1 + num2 + num3 + num4 + num5;
-            console.log("Sum of the numbers:", sum);
-    
-            // Subtract 40 from the sum
-            var result = sum - 40;
-            console.log("Result of the subtraction:", result);
-    
-            // Multiply the result by 30
-            var finalResult = result * 30;
-            console.log("Result of the multiplication:", finalResult)
-    
-            // Output the final result
-            console.log("Final Result:", finalResult);
-        </script>
-    </body>
+			// Array to hold the numbers
+			var numbers = [num1, num2, num3, num4, num5];
+
+			for (var i = 0; i < numbers.length; i++) {
+				console.log('Value of num' + (i + 1) + ':', numbers[i]);
+			}
+
+			// Add the numbers
+			var sum = num1 + num2 + num3 + num4 + num5;
+			console.log('Sum of the numbers:', sum);
+
+			// Subtract 40 from the sum
+			var result = sum - 40;
+			console.log('Result of the subtraction:', result);
+
+			// Multiply the result by 30
+			var finalResult = result * 30;
+			console.log('Result of the multiplication:', finalResult);
+
+			// Output the final result
+			console.log('Final Result:', finalResult);
+		</script>
+	</body>
 </html>

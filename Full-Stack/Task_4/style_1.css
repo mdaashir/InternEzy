@@ -119,6 +119,18 @@ body {
 	margin: 0;
 }
 
+.location {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.location-icon {
+	display: inline-block;
+	height: 0.8em;
+	width: auto;
+	margin-right: 5px;
+}
+
 .location-container {
 	padding: 25px 35px;
 }

@@ -1,4 +1,15 @@
 /* External CSS */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+:root {
+	--gradient: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+}
+
+* {
+	box-sizing: border-box;
+	line-height: 1.25em;
+}
+
 body {
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
@@ -16,4 +27,8 @@ body {
 	font-family: 'Times New Roman';
 	position: absolute;
 	top: 0px;
+}
+
+.clear {
+	clear: both;
 }

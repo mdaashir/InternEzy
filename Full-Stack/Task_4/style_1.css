@@ -138,7 +138,7 @@ body {
 	border-radius: 10px;
 }
 
-.week-list>li {
+.week-list > li {
 	float: left;
 	padding: 15px;
 	cursor: pointer;
@@ -146,26 +146,26 @@ body {
 	border-radius: 10px;
 }
 
-.week-list>li:hover {
+.week-list > li:hover {
 	transform: scale(1.1);
 	background: #fff;
 	color: #222831;
-	box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2)
+	box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
 }
 
-.week-list>li.active {
+.week-list > li.active {
 	background: #fff;
 	color: #222831;
 	border-radius: 10px;
 }
 
-.week-list>li .day-name {
+.week-list > li .day-name {
 	display: block;
 	margin: 10px 0 0 0;
 	text-align: center;
 }
 
-.week-list>li .day-icon {
+.week-list > li .day-icon {
 	display: flex;
 	margin-top: 20px;
 	justify-content: center;
@@ -176,18 +176,17 @@ body {
 	font-size: 35px;
 }
 
-.week-list>li .day-icon img {
+.week-list > li .day-icon img {
 	filter: drop-shadow(0 0 2px white);
 }
 
-.week-list>li .day-temp {
+.week-list > li .day-temp {
 	display: block;
 	text-align: center;
 	margin-top: 15px;
 	font-weight: 700;
 	margin-bottom: 25px;
 }
-
 
 .location {
 	display: inline-block;

@@ -53,6 +53,10 @@ body {
 	float: left;
 }
 
+.weather-side:hover {
+	transform: scale(1.1) perspective(1500px) rotateY(10deg);
+}
+
 .info-side {
 	position: relative;
 	float: left;

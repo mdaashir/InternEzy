@@ -32,3 +32,23 @@ body {
 .clear {
 	clear: both;
 }
+
+.container {
+	border-radius: 25px;
+	box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+	background-color: #222831;
+	color: #ffffff;
+	height: 400px;
+}
+
+.weather-side {
+	position: relative;
+	height: 100%;
+	border-radius: 25px;
+	background-image: url('images/sunset_beach_seawave.png');
+	width: 300px;
+	box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+	transition: transform 300ms ease;
+	transform: translateZ(0) scale(1.02) perspective(1000px);
+	float: left;
+}

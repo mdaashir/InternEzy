@@ -118,3 +118,25 @@ body {
 .weather-desc {
 	margin: 0;
 }
+
+.location-container {
+	padding: 25px 35px;
+}
+
+.location-input {
+	position: relative;
+	width: 100%;
+	border: none;
+	border-radius: 25px;
+	padding: 10px;
+	font-family: 'Montserrat', sans-serif;
+	background-image: var(--gradient);
+	color: #000000;
+	font-weight: 700;
+	box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+	transition: transform 200ms ease;
+}
+
+.location-input:hover {
+	transform: scale(0.95);
+}

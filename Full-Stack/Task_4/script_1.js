@@ -7,35 +7,34 @@ let weatherIconElement = document.querySelector('.weather-icon');
 let locationName = document.querySelector('.location');
 let description = document.querySelector('.weather-desc');
 let humidityValue = document.querySelector('.humidity .value');
-let windValue = document.querySelector( '.wind .value' );
+let windValue = document.querySelector('.wind .value');
 
 const dayElements = document.querySelectorAll('.day-name');
 const tempElements = document.querySelectorAll('.day-temp');
 const iconElements = document.querySelectorAll('.day-icon');
 
-const todayDate = new Date().toLocaleDateString( 'en-US', { weekday: 'long' } );
+const todayDate = new Date().toLocaleDateString('en-US', { weekday: 'long' });
 
-cityName.addEventListener( 'input', getWeather );
+const appid = '54a57bc234ad752a4f59e59cd372201d';
+const units = 'metric';
+
+cityName.addEventListener('input', getWeather);
 
 async function getWeather() {
 	try {
 		var city = cityName.value;
 
-		const response = await axios.get(
-			'https://api.openweathermap.org/data/2.5/forecast',
-			{
-				params: {
-					q: city,
-					appid: '54a57bc234ad752a4f59e59cd372201d',
-					units: 'metric',
-				},
-			}
+		const response = await fetch(
+			`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${appid}&units=${units}`
 		);
-		const currentTemperature = response.data.list[0].main.temp;
+
+		const data = await response.json();
+
+		const currentTemperature = data.list[0].main.temp;
 
 		weatherTemp.textContent = Math.round(currentTemperature) + 'ºC';
 
-		const forecastData = response.data.list;
+		const forecastData = data.list;
 
 		const dailyForecast = {};
 		forecastData.forEach((data) => {
@@ -73,7 +72,7 @@ async function getWeather() {
 
 		weatherIconElement.innerHTML = getWeatherIcon(currentWeatherIconCode);
 
-		locationName.textContent = response.data.city.name;
+		locationName.textContent = data.city.name;
 		description.textContent = dailyForecast[todayDate].description
 			.split(' ')
 			.map((word) => word.charAt(0).toUpperCase() + word.slice(1))

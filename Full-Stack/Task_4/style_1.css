@@ -126,6 +126,65 @@ body {
 	margin: 0;
 }
 
+.week-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 10px 35px;
+	box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+}
+
+.week-list>li {
+	float: left;
+	padding: 15px;
+	cursor: pointer;
+	transition: 200ms ease;
+	border-radius: 10px;
+}
+
+.week-list>li:hover {
+	transform: scale(1.1);
+	background: #fff;
+	color: #222831;
+	box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2)
+}
+
+.week-list>li.active {
+	background: #fff;
+	color: #222831;
+	border-radius: 10px;
+}
+
+.week-list>li .day-name {
+	display: block;
+	margin: 10px 0 0 0;
+	text-align: center;
+}
+
+.week-list>li .day-icon {
+	display: flex;
+	margin-top: 20px;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	width: auto;
+	margin: 0 auto;
+	font-size: 35px;
+}
+
+.week-list>li .day-icon img {
+	filter: drop-shadow(0 0 2px white);
+}
+
+.week-list>li .day-temp {
+	display: block;
+	text-align: center;
+	margin-top: 15px;
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+
 .location {
 	display: inline-block;
 	margin-top: 10px;

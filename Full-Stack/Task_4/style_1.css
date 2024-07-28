@@ -77,3 +77,24 @@ body {
 .date-day {
 	display: block;
 }
+
+.weather-container {
+	position: absolute;
+	bottom: 25px;
+	left: 25px;
+}
+
+.weather-icon img {
+	filter: drop-shadow(0 0 2px #fff);
+	width: 100%;
+}
+
+.weather-temp {
+	margin: 0;
+	font-weight: 700;
+	font-size: 4em;
+}
+
+.weather-desc {
+	margin: 0;
+}

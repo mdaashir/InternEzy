@@ -1,0 +1,3 @@
+creation of product web page using API {*dataAPI [https://dummyjson.com/products]}
+create a todo list web page {*sample [https://coruscating-cat-632dff.netlify.app/]}
+create a weather app using openwheather API {*sample [https://vermillion-bublanina-5634fb.netlify.app/]}

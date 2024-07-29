@@ -3,7 +3,7 @@
 let listProducts = document.querySelector('.list');
 let listPages = document.querySelector('.listPage');
 
-function createProducts(imgUrl, titleName, details, costPrice) {
+async function createProducts(imgUrl, titleName, details, costPrice) {
 	let product = document.createElement('div');
 	let image = document.createElement('div');
 	let img = document.createElement('img');

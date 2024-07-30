@@ -199,3 +199,16 @@ input:checked + span::before {
 .filter:hover {
 	background-color: #e6b7eca1;
 }
+
+.delete-all {
+	display: flex;
+	color: #eee;
+	padding: 7px 15px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.delete-all:hover {
+	border-radius: 5px;
+	background-color: #e6b7eca1;
+}

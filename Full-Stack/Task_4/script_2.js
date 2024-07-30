@@ -2,7 +2,6 @@
 let pageNumber = 1;
 let limit = 6;
 
-let listItems = document.querySelectorAll('.list .item');
 let listProducts = document.querySelector('.list');
 let listPages = document.querySelector('.listPage');
 
@@ -63,9 +62,10 @@ async function getProduct() {
 	}
 }
 
-getProduct();
+getProduct().then(loadItem);
 
 function loadItem() {
+	let listItems = document.querySelectorAll('.list .item');
 	let beginGet = limit * (pageNumber - 1);
 	let endGet = limit * pageNumber - 1;
 	if (listItems) {
@@ -76,12 +76,13 @@ function loadItem() {
 				item.style.display = 'none';
 			}
 		});
-		listPage();
+		listPage(listItems);
 	}
+	console.log(listItems);
 }
 loadItem();
 
-function listPage() {
+function listPage(listItems) {
 	let count = Math.ceil(listItems.length / limit);
 	if (listPages) {
 		listPages.innerHTML = '';
@@ -111,7 +112,6 @@ function listPage() {
 		listPages?.appendChild(nextPage);
 	}
 }
-
 
 function changePage(i) {
 	pageNumber = i;

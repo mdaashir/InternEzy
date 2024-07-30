@@ -63,3 +63,20 @@ h1 {
 .todo-input::placeholder {
 	color: #bfbfbf;
 }
+
+.add-button {
+	border: none;
+	outline: none;
+	background: #e6b7eca1;
+	color: #fff;
+	font-size: 35px;
+	cursor: pointer;
+	border-radius: 40px;
+	width: 40px;
+	height: 40px;
+}
+
+.empty-image {
+	margin: 55px auto 0;
+	display: block;
+}

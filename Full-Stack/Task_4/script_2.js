@@ -78,7 +78,6 @@ function loadItem() {
 		});
 		listPage(listItems);
 	}
-	console.log(listItems);
 }
 loadItem();
 

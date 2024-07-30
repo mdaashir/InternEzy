@@ -73,3 +73,16 @@ body {
 .item:hover img{
     transform: translate(0,-50px) scale(1.4);
 }
+.listPage{
+    padding:10px;
+    text-align: center;
+    list-style: none;
+}
+.listPage li{
+    background-color: #ffffffBD;
+    padding:20px;
+    display: inline-block;
+    margin:0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}

@@ -71,3 +71,23 @@ input.addEventListener('keyup', (e) => {
 	}
 	addTodo(todo);
 });
+
+addButton.addEventListener('click', () => {
+	let todo = input.value.trim();
+	if (!todo) {
+		return;
+	}
+	addTodo(todo);
+});
+
+function updateStatus(todo) {
+	let todoName = todo.parentElement.lastElementChild;
+	if (todo.checked) {
+		todoName.classList.add('checked');
+		todosJson[todo.id].status = 'completed';
+	} else {
+		todoName.classList.remove('checked');
+		todosJson[todo.id].status = 'pending';
+	}
+	localStorage.setItem('todos', JSON.stringify(todosJson));
+}

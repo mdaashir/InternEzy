@@ -1,5 +1,5 @@
 /* External JS */
-
+let listItems = document.querySelectorAll('.list .item');
 let listProducts = document.querySelector('.list');
 let listPages = document.querySelector('.listPage');
 
@@ -13,14 +13,14 @@ async function createProducts(imgUrl, titleName, details, costPrice) {
 	let price = document.createElement('div');
 	let button = document.createElement('button');
 
-	product.setAttribute('class', 'item');
-	image.setAttribute('class', 'img');
+	product.className = 'item';
+	image.className = 'img';
 	img.setAttribute('src', imgUrl);
-	content.setAttribute('class', 'content');
-	title.setAttribute('class', 'title');
-	description.setAttribute('class', 'des');
-	price.setAttribute('class', 'price');
-	button.setAttribute('class', 'add');
+	content.className = 'content';
+	title.className = 'title';
+	description.className = 'des';
+	price.className = 'price';
+	button.className = 'add';
 
 	title.innerText = titleName;
 	description.innerText = details;
@@ -59,3 +59,34 @@ async function getProduct() {
 }
 
 getProduct();
+
+function listPage() {
+	let count = Math.ceil(listItems.length / limit);
+	if (listPages) {
+		listPages.innerHTML = '';
+	}
+
+	if (thisPage != 1) {
+		let prev = document.createElement('li');
+		prev.innerText = 'Prev';
+		prev.setAttribute('onclick', 'changePage(' + (thisPage - 1) + ')');
+		listPages?.appendChild(prev);
+	}
+
+	for (let i = 1; i <= count; i++) {
+		let newPage = document.createElement('li');
+		newPage.innerText = i.toString();
+		if (i == thisPage) {
+			newPage.classList.add('active');
+		}
+		newPage.setAttribute('onclick', 'changePage(' + i + ')');
+		listPages?.appendChild(newPage);
+	}
+
+	if (thisPage != count) {
+		let next = document.createElement('li');
+		next.innerText = 'Next';
+		next.setAttribute('onclick', 'changePage(' + (thisPage + 1) + ')');
+		listPages?.appendChild( next );
+	}
+}

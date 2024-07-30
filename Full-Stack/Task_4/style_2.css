@@ -21,3 +21,12 @@ body {
     width:900px;
     margin:150px auto 0;
 }
+.list{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    column-gap: 20px;
+}
+.item .img img{
+    width:200px;
+    transition: 0.7s;
+}

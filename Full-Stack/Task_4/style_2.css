@@ -1,0 +1,17 @@
+/* External CSS */
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.banner {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    position: absolute;
+    top: 0px;
+}

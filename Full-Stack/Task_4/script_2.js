@@ -57,7 +57,16 @@ async function getProduct() {
 		// const response = await fetch('https://fakestoreapi.com/products');
 		const response = await fetch('https://dummyjson.com/products');
 		const data = await response.json();
-		console.log(data);
+		// console.log( data );
+		let product = data.products;
+		product.forEach((product) => {
+			createProducts(
+				product.images[0],
+				product.title,
+				product.description,
+				product.price
+			);
+		});
 	} catch (error) {
 		console.error(error.message);
 	}

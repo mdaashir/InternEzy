@@ -91,3 +91,24 @@ function updateStatus(todo) {
 	}
 	localStorage.setItem('todos', JSON.stringify(todosJson));
 }
+
+function remove(todo) {
+	const index = todo.dataset.index;
+	todosJson.splice(index, 1);
+	showTodos();
+	localStorage.setItem('todos', JSON.stringify(todosJson));
+}
+
+filters.forEach(function (el) {
+	el.addEventListener('click', (e) => {
+		if (el.classList.contains('active')) {
+			el.classList.remove('active');
+			filter = '';
+		} else {
+			filters.forEach((tag) => tag.classList.remove('active'));
+			el.classList.add('active');
+			filter = e.target.dataset.filter;
+		}
+		showTodos();
+	});
+});

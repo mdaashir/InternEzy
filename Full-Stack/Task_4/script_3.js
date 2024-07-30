@@ -8,6 +8,41 @@ const deleteAllButton = document.querySelector('.delete-all');
 const filters = document.querySelectorAll('.filter');
 let filter = '';
 
+showTodos();
+
+function getTodoHtml(todo, index) {
+	if (filter && filter != todo.status) {
+		return '';
+	}
+    let checked = todo.status == 'completed' ? 'checked' : '';
+    let li = document.createElement( 'li' );
+    let label = document.createElement( 'label' );
+    let input = document.createElement( 'input' );
+    let span = document.createElement( 'span' );
+    let button = document.createElement( 'button' );
+    let i = document.createElement( 'i' );
+
+    li.className = 'todo';
+    label.htmlFor = index;
+    input.id = index;
+    input.type = 'checkbox';
+    input.onclick = function () { updateStatus( this ); };
+    span.className = checked;
+    span.innerHTML = '' + todo.name + '';
+    button.className = 'delete-btn';
+    button.dataset.index = index;
+    button.onclick = function () { remove( this ); };
+    i.className = 'fa fa-times';
+
+    button.appendChild( i );
+    label.appendChild( input );
+    label.appendChild( span );
+    li.appendChild( label );
+    li.appendChild( button );
+
+	return li.outerHTML;
+}
+
 function showTodos() {
 	if (todosJson.length == 0) {
 		todosHtml.innerHTML = '';

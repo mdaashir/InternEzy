@@ -96,4 +96,23 @@ function listPage() {
 	}
 }
 
-listPage();
+function loadItem() {
+	let beginGet = limit * (pageNumber - 1);
+	let endGet = limit * pageNumber - 1;
+	if (listItems) {
+		listItems.forEach((item, key) => {
+			if (key >= beginGet && key <= endGet) {
+				item.style.display = 'block';
+			} else {
+				item.style.display = 'none';
+			}
+		});
+		listPage();
+	}
+}
+loadItem();
+
+function changePage(i) {
+	pageNumber = i;
+	loadItem();
+}

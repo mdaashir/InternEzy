@@ -80,3 +80,43 @@ h1 {
 	margin: 55px auto 0;
 	display: block;
 }
+
+.todo {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #463c7b;
+	border-radius: 5px;
+	margin: 10px 0;
+	padding: 10px 12px;
+	border: 2px solid #e6b7eca1;
+	transition: all 0.2s ease;
+}
+
+.todo:first-child {
+	margin-top: 0;
+}
+
+.todo:last-child {
+	margin-bottom: 0;
+}
+
+.todo:hover {
+	background-color: #e6b7eca1;
+}
+
+.todo label {
+	cursor: pointer;
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	font-family: 'Roboto', sans-serif;
+	color: #eee;
+}
+
+.todo span {
+	padding-left: 20px;
+	position: relative;
+	cursor: pointer;
+}

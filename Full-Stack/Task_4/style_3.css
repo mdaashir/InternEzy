@@ -1,17 +1,26 @@
 /* External CSS */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 body {
-    font-family: 'Arial', sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: whitesmoke;
+	font-family: 'Roboto', sans-serif;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url(./images/background.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .banner {
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Times New Roman';
-    position: absolute;
-    top: 0px;
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Times New Roman';
+	position: absolute;
+	top: 0px;
 }

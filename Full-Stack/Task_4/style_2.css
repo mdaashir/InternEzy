@@ -86,3 +86,11 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
+.listPage .active{
+    background-color: #4711b3;
+    color:#fff;
+}
+
+.listPage li:hover{
+    background-color: #6b3dc6;
+}

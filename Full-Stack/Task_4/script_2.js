@@ -33,24 +33,10 @@ async function createProducts(imgUrl, titleName, details, costPrice) {
 	content.appendChild(price);
 	content.appendChild(button);
 	product.appendChild(image);
-	product.appendChild(content);
+	product.appendChild( content );
 
-	// <div class="item">
-	//     <div class="img">
-	//         <img src="https://drcoder.alfadigital.az/codepen-assets/frontend-pagination/1.png">
-	//     </div>
-	//     <div class="content">
-	//         <div class="title">Product 1</div>
-	//         <div class="des">
-	//             Lorem ipsum dolor sit amet consectetur
-	//              adipisicing elit. Repellendus, minus.
-	//         </div>
-	//         <div class="price">$ 150</div>
-	//         <button class="add">Add to cart</button>
-	//     </div>
-	// </div>
-
-	listProducts?.appendChild(product);
+	// listProducts?.appendChild(product);
+	return product;
 }
 async function getProduct() {
 	try {
@@ -58,14 +44,14 @@ async function getProduct() {
 		const response = await fetch('https://dummyjson.com/products');
 		const data = await response.json();
 		// console.log( data );
-		let product = data.products;
-		product.forEach((product) => {
-			createProducts(
-				product.images[0],
-				product.title,
-				product.description,
-				product.price
-			);
+		const product = data.products;
+		product.forEach(async (product) => {
+			listProducts?.appendChild(await createProducts(
+					product.images[ 0 ],
+					product.title,
+					product.description,
+					product.price
+				));
 		});
 	} catch (error) {
 		console.error(error.message);

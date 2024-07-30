@@ -41,3 +41,25 @@ h1 {
 	text-align: center;
 	margin-bottom: 36px;
 }
+
+.input-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 25px;
+}
+
+.todo-input {
+	flex: 1;
+	outline: none;
+	padding: 10px 10px 10px 20px;
+	background-color: transparent;
+	border: 2px solid #e6b7eca1;
+	border-radius: 30px;
+	color: #eee;
+	font-size: 16px;
+	margin-right: 10px;
+}
+
+.todo-input::placeholder {
+	color: #bfbfbf;
+}

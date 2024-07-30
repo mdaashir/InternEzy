@@ -1,4 +1,7 @@
 /* External JS */
+let pageNumber = 1;
+let limit = 6;
+
 let listItems = document.querySelectorAll('.list .item');
 let listProducts = document.querySelector('.list');
 let listPages = document.querySelector('.listPage');
@@ -33,7 +36,7 @@ async function createProducts(imgUrl, titleName, details, costPrice) {
 	content.appendChild(price);
 	content.appendChild(button);
 	product.appendChild(image);
-	product.appendChild( content );
+	product.appendChild(content);
 
 	// listProducts?.appendChild(product);
 	return product;
@@ -46,12 +49,14 @@ async function getProduct() {
 		// console.log( data );
 		const product = data.products;
 		product.forEach(async (product) => {
-			listProducts?.appendChild(await createProducts(
-					product.images[ 0 ],
+			listProducts?.appendChild(
+				await createProducts(
+					product.images[0],
 					product.title,
 					product.description,
 					product.price
-				));
+				)
+			);
 		});
 	} catch (error) {
 		console.error(error.message);
@@ -66,27 +71,29 @@ function listPage() {
 		listPages.innerHTML = '';
 	}
 
-	if (thisPage != 1) {
-		let prev = document.createElement('li');
-		prev.innerText = 'Prev';
-		prev.setAttribute('onclick', 'changePage(' + (thisPage - 1) + ')');
-		listPages?.appendChild(prev);
+	if (pageNumber != 1) {
+		let prevPage = document.createElement('li');
+		prevPage.innerText = 'Prev';
+		prevPage.setAttribute('onclick', 'changePage(' + (pageNumber - 1) + ')');
+		listPages?.appendChild(prevPage);
 	}
 
 	for (let i = 1; i <= count; i++) {
 		let newPage = document.createElement('li');
 		newPage.innerText = i.toString();
-		if (i == thisPage) {
+		if (i == pageNumber) {
 			newPage.classList.add('active');
 		}
 		newPage.setAttribute('onclick', 'changePage(' + i + ')');
 		listPages?.appendChild(newPage);
 	}
 
-	if (thisPage != count) {
-		let next = document.createElement('li');
-		next.innerText = 'Next';
-		next.setAttribute('onclick', 'changePage(' + (thisPage + 1) + ')');
-		listPages?.appendChild( next );
+	if (pageNumber != count) {
+		let nextPage = document.createElement('li');
+		nextPage.innerText = 'Next';
+		nextPage.setAttribute('onclick', 'changePage(' + (pageNumber + 1) + ')');
+		listPages?.appendChild(nextPage);
 	}
 }
+
+listPage();
